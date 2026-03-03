@@ -1,0 +1,131 @@
+*{margin: 0;}
+.container{
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+    display: flex;
+}
+.box1{
+    height: 100%;
+    width: 33%;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box1_1{
+    height: 40%;
+    width: 100%;
+    background-color: purple;
+}
+.box1_2{
+    height: 35%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+}
+.box1_2_1{
+    height: 100%;
+    width: 50%;
+    background-color: green;
+}
+.box1_2_2{
+    height: 100%;
+    width: 50%;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box1_2_2_1{
+    height: 20%;
+    width: 100%;
+    background-color: cyan;
+}
+.box1_2_2_2{
+    height: 80%;
+    width: 100%;
+    background-color: red;
+}
+.box1_3{
+    height: 25%;
+    width: 100%;
+    background-color: green;
+}
+.box2{
+    height: 100%;
+    width: 34%;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box2_1{
+    height: 70%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+}
+.box2_1_1{
+    height: 100%;
+    width: 50%;
+    background-color: green;
+}
+.box2_1_2{
+    height: 100%;
+    width: 50%;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box2_1_2_1{
+    height: 20%;
+    width: 100%;
+    background-color: cyan;
+}
+.box2_1_2_2{
+    height: 80%;
+    width: 100%;
+    background-color: red;
+}
+.box2_2{
+    height: 30%;
+    width: 100%;
+    background-color: purple;
+}
+.box3{
+    height: 100%;
+    width: 33%;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box3_1{
+    height: 25%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box3_1_1{
+    height: 50%;
+    width: 100%;
+    background-color: green;
+}
+.box3_1_2{
+    height: 50%;
+    width: 25%;
+    background-color: cyan;
+}
+.box3_1_3{
+    height: 50%;
+    width: 75%;
+    background-color: red;
+}
+.box3_2{
+    height: 69%;
+    width: 100%;
+    background-color: purple;
+}
+.box3_3{
+    height: 6%;
+    width: 100%;
+    background-color: cyan;
+}

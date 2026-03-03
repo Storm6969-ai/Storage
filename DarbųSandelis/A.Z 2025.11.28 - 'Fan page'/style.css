@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+}
+body{
+    background-image: radial-gradient(ellipse at 50% 50%, #ff0000 0%, #080f4a 100%);
+    height: 100vh;
+    width: 100vw;
+    justify-items: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 45vw);
+    grid-template-rows: repeat(2, 42vh);
+    background-color: transparent;
+    grid-column-gap: 4em;
+    grid-row-gap: 1.5em;
+}
+div{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: red;
+}
+p{
+    font-size: 3vh;
+}
+.box11{
+    display: flex;
+}
+.box12{
+    display: flex;
+}
+.box13{
+    display: flex;
+}
+.box14{
+    display: flex;
+}
+
+.box1{
+    height: 100%;
+    width: 20%;
+}
+.box2{
+    height: 100%;
+    width: 80%;
+    background-size: 100% 100%;
+    background-image: url("Pictures/Dustin & Steve looking up.png")
+}
+.box3{
+    height: 100%;
+    width: 80%;
+    background-size: 100% 100%;
+    background-image: url("Pictures/Joyce sitting sad for Will.png")
+}
+.box4{
+    height: 100%;
+    width: 20%;
+}
+
+.box5{
+    height: 100%;
+    width: 20%;
+}
+.box6{
+    height: 100%;
+    width: 80%;
+    background-size: 100% 100%;
+    background-image: url("Pictures/Massive shockwave being sent out of Hawkins Lab.png")
+}
+.box7{
+    height: 100%;
+    width: 80%;
+    background-size: 100% 100%;
+    background-image: url("Pictures/Mind Flayer particles going up the signal tower.png")
+}
+.box8{
+    height: 100%;
+    width: 20%;
+}

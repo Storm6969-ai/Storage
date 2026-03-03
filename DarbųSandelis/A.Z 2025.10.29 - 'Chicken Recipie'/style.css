@@ -1,0 +1,116 @@
+.container{
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+    display: flex;
+}
+.box1{
+    height: 100%;
+    width: 20%;
+    background-color: black;
+}
+.box1_1{
+    height: 50%;
+    width: 100%;
+    margin: auto;
+    background-color:red;
+}
+.box1_2{
+    height: 50%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-image: url("https://i.pinimg.com/originals/5d/56/17/5d5617971cb9ef1626bd95e17518038f.png");
+    background-color: white;
+}
+.box2{
+    height: 100%;
+    width: 80%;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box2_1{
+    height: 25%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:gold;
+}
+.box2_2{
+    height: 25%;
+    width: 50%;
+    background-color: red;
+}
+.box2_3{
+    height: 75%;
+    width: 75%;
+    background-color:black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box2_4{
+    height: 75%;
+    width: 25%;
+    background-color:green;
+
+}
+.box2_3_1{
+    height: 50%;
+    width: 35%;
+    background-size: 100% 100%;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Male_and_female_chicken_sitting_together.jpg/250px-Male_and_female_chicken_sitting_together.jpg");
+    background-color: gold
+}
+.box2_3_2{
+    height: 50%;
+    width: 65%;
+    background-color: white
+}
+.box2_3_3{
+    height:50% ;
+    width: 65%;
+    background-color: green
+}
+.box2_3_4{
+    height: 50%;
+    width: 35%;
+    background-size: 100% 100%;
+    background-image: url("https://assets.epicurious.com/photos/62f16ed5fe4be95d5a460eed/1:1/w_4318,h_4318,c_limit/RoastChicken_RECIPE_080420_37993.jpg");
+    background-color: cyan
+}
+
+
+
+.h11{
+    text-align: center;
+}
+.box1_1 h3{
+    font-size: 1rem;
+}
+.text1{
+    display: flex;
+    justify-content: center;
+}
+.text2{
+    display: flex;
+    justify-content: left;
+}
+.text3{
+    display: flex;
+    justify-content: center;
+}
+.text4{
+    display: flex;
+    justify-content: right;
+}
+.text5{
+    display: flex;
+    justify-content: left;
+}
+.h3{
+    text-align: center;
+}
+.p{
+    margin-left: 5%;
+}

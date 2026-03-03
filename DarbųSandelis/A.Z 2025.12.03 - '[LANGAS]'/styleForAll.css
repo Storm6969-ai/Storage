@@ -1,0 +1,29 @@
+.glass:hover{
+    cursor: url(Pics/HammerCursor.png) 20 30, auto;
+}
+
+input[type="checkbox"]:checked + .glass,
+body:has(#g2-3-2:checked) .g2-3-2,
+body:has(#g2-2-1:checked) .g2-2-1{
+    pointer-events: none;
+    background-image: url(Pics/BrokenGlass.png);
+    background-size: 100% 100%;
+    backdrop-filter: blur(20px);
+}
+
+input[type="checkbox"]:active + .glass{
+    cursor: url(Pics/HammerHitHAMMER.png);
+}
+
+
+body input[type="checkbox"]{
+    display: none;
+}
+
+.glass:active{
+    cursor: url(Pics/HammerHitHAMMER.png), auto;
+    background-image: url(Pics/HammerHit.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
