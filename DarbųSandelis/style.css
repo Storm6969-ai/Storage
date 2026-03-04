@@ -40,7 +40,6 @@ body{
     font-weight: bold;
     height: 40px;
 }
-
 .card * {
     position: absolute;
     width: 100%;
@@ -59,7 +58,7 @@ img{
     height: 11.25em;
     top: 40px;
 }
-a {
+a{
     background-color: #982598;
     bottom: 0;
     border-bottom-left-radius: 25px;
@@ -71,28 +70,28 @@ a:hover{
     background-color: #B500B2;
     color: #fbd8f0;
 }
+.dropdown-content{
+    display: none;
+    position: absolute;
+}
+/*don't change what's up*/
+
+
 .item2:hover .dropdown-content,
 .item5:hover .dropdown-content,
-.item8:hover .dropdown-content {
+.item8:hover .dropdown-content /*add MULTIPULES with .dropdown-content here*/{
     display: block;
 }
-
-.dropdown-content{
-  display: none;
-  position: absolute;
-}
-
-
-
-.card:has(.item8) {
+.card:has(.item8:hover),
+.card:has(.item5:hover),
+.card:has(.item2:hover) {
     z-index: 2;
 }
-.item8{
+.item8, .item5, .item2 /*add MULTIPULES HERE*/{
     display: flex;
     height: calc(11.25em + 40px * 2);
     border-radius: 30px;
 }
-
 .item8:hover {
     border: #C00707 solid 4px;
     height: calc(11.25em * 3 + 40px * 2); 
@@ -104,28 +103,47 @@ a:hover{
     top: calc(11.25em * 2 + 40px);
 }
 
-/* .item5:hover .item5-dropdown0 {
-    bottom: calc(11.25em + 40px * 2);
+.item5:hover{
+    border: #C00707 solid 4px;
+    height: calc(11.25em * 3 + 40px * 4); 
+}
+.item5:hover .item5-dropdown0 {
+    bottom: calc(6.875em * 2);
     border-radius: 0;
-    bottom: 0;
-    border: #C00707 solid 3px;
 }
 .item5:hover .item5-dropdown1 {
     top: calc(40px * 2 + 11.25em);
-    border: #C00707 solid 3px;
 }
 .item5:hover .item5-dropdown2 {
     top: calc(6.875em * 2);
     border-radius: 0;
-    transform: translate(0);
-    border: #C00707 solid 3px;
 }
 .item5:hover .item5-dropdown3 {
     top: calc(40px * 3 + 11.25em * 2);
-    border: #C00707 solid 3px;
 }
-.item5:hover .item5-dropdown4 {
-    transform: translate(0);
+
+.item2:hover{
+    border: #C00707 solid 4px;
+    height: calc(11.25em * 4 + 40px * 5); 
+}
+.item2:hover .item2-dropdown0 {
+    bottom: calc(6.875em * 3);
+    border-radius: 0;
+}
+.item2:hover .item2-dropdown1 {
+    top: calc(40px * 2 + 11.25em);
+}
+.item2:hover .item2-dropdown2 {
+    top: calc(6.875em * 2);
+    border-radius: 0;
+}
+.item2:hover .item2-dropdown3 {
+    top: calc(40px * 3 + 11.25em * 2);
+}
+.item2:hover .item2-dropdown4 {
     top: calc(6.875em * 3);
-    border: #C00707 solid 3px;
-} */
+    border-radius: 0;
+}
+.item2:hover .item2-dropdown5 {
+    top: calc(40px * 4 + 11.25em * 3);
+}
