@@ -3,14 +3,23 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-function remove(arr, value){
-  var index = arr.indexOf(value);
-  if (index > -1) {
-    arr.splice(index, 1);
+function remove(array, value){ //speed up function: draws a card from the current deck, if card isn't there, nothing happens
+  if (array.includes(value)){
+    array.splice(array.indexOf(value), 1);
+    return array;
+  } else {
+    return false
   }
-  return arr;
 }
-
+function drawCard(card = currentCards[getRandomInt(0, currentCards.length-1)]){ //speed up function: draws a card from the current deck, if card isn't there, nothing happens
+  if (currentCards.includes(card)){
+    remove(currentCards, card)
+    return card
+  } else {
+    return false
+  }
+}
+let whichPlayerTrumpCard = playerTrumpCards[getRandomInt(0, playerTrumpCards.length-1)]
 
 
 var playerTrumpCards = []
@@ -21,9 +30,7 @@ var goal = 21
 var deckCards = ['card1', 'card2', 'card3', 'card4', 'card5', 'card6', 'card7', 'card8', 'card9', 'card10', 'card11']
 var currentCards
 
-function deckReset(){
-  currentCards = deckCards
-}
+function deckReset(){currentCards = deckCards}
 deckReset()
 
 function giveCard() {
@@ -62,9 +69,9 @@ function trumpCardFunction_raiseRisk(raiseRiskBy){
 }
 
 
-const trumpCard_OneUp = function trumpCard_OneUp(){trumpCardFunction_raiseRisk(1), canTrumpCardBeOnTable(true)} // add On Table effect
-const trumpCard_TwoUp = function trumpCard_TwoUp(){trumpCardFunction_raiseRisk(2), canTrumpCardBeOnTable(true)} // add On Table effect
-const trumpCard_TwoUpPLUS = function trumpCard_TwoUp(){trumpCard_TwoUp, canTrumpCardBeOnTable(true), drawTrumpCard} // add On Table effect
+const trumpCard_OneUp = function trumpCard_OneUp(){canTrumpCardBeOnTable(true), trumpCardFunction_raiseRisk(1)} // add On Table effect
+const trumpCard_TwoUp = function trumpCard_TwoUp(){canTrumpCardBeOnTable(true), trumpCardFunction_raiseRisk(2)} // add On Table effect
+const trumpCard_TwoUpPLUS = function trumpCard_TwoUp(){canTrumpCardBeOnTable(true), trumpCardFunction_raiseRisk(2), drawTrumpCard} // add On Table effect
 const trumpCard_2Card = function trumpCard_2Card(){return drawCard('card2')}
 const trumpCard_3Card = function trumpCard_3Card(){return drawCard('card3')}
 const trumpCard_4Card = function trumpCard_4Card(){return drawCard('card4')}
@@ -98,8 +105,8 @@ const trumpCard_TrumpSwitchPLUS = function trumpCard_TrumpSwitchPLUS(){
 
 
 
-const trumpCard_Shield = function trumpCard_Shield(){trumpCardFunction_raiseRisk(-1), canTrumpCardBeOnTable(true)} // add On Table effect
-const trumpCard_ShieldPLUS = function trumpCard_ShieldPLUS(){trumpCardFunction_raiseRisk(-2), canTrumpCardBeOnTable(true)} // add On Table effect
+const trumpCard_Shield = function trumpCard_Shield(){canTrumpCardBeOnTable(true), trumpCardFunction_raiseRisk(-1)} // add On Table effect
+const trumpCard_ShieldPLUS = function trumpCard_ShieldPLUS(){canTrumpCardBeOnTable(true), trumpCardFunction_raiseRisk(-2)} // add On Table effect
 
 const trumpCard_GoFor17 = function trumpCard_GoFor17(){goal = 17}
 const trumpCard_GoFor24 = function trumpCard_GoFor24(){goal = 24}
@@ -182,7 +189,7 @@ var trumpCards = (
 // trumpCard_GoFor17()
 // console.log(goal)
 // console.log('EnemyRisk:', enemyRisk, 'PlayerRisk:', playerRisk)
-var playedByPlayer = true
+// var playedByPlayer = true
 
 // console.log('Prim Trump Cards:', playerTrumpCards)
 
@@ -195,4 +202,9 @@ var playedByPlayer = true
 // console.log('Player Trump Cards after Trump Swtich:', playerTrumpCards)
 // // console.log(trumpCard_7Card())
 // // console.log(currentCards)
-trumpCard_TrumpSwitch()
+// trumpCard_TrumpSwitch()
+console.log(playerTrumpCards)
+playerTrumpCards.push(drawTrumpCard, drawTrumpCard, drawTrumpCard)
+
+
+console.log(playerTrumpCards)
