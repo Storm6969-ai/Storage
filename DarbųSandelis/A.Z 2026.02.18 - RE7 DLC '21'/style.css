@@ -5,9 +5,6 @@
   padding: 0;
   margin: 0;
 }
-:root{
-  --tableContainerHeight: 300px;
-}
 body{
   height: 100vh;
   width: 100vw;
@@ -17,15 +14,12 @@ body{
 }
 
 .table{
-  transform-style: preserve-3d;
-  overflow: visible;
   position: absolute;
   bottom: 0;
   right: 0;
   height: 700px;
   width: 120vw;
-  /* bottom: 10vh; */
-  background-image: radial-gradient(ellipse at 50% 50%, #445297 0%, #ff0000 100%);
+  /*delete when done*/ background-image: radial-gradient(ellipse at 50% 50%, #445297 0%, #ff0000 100%);
   transform: rotateX(45deg) translateZ(-4em) translateY(-2.5cm) translateX(25em) /* rotateY(180deg) */ /* rotateZ(180deg) */;
 }
 
@@ -33,29 +27,35 @@ body{
 .enemySide{
   text-align: end;
   transform: rotateZ(180deg);
-  background-color: blue;
-  font-size: 12em;
+  /*delete when done*/ background-color: blue;
 }
 .playerSide{
-  background-color: purple;
+  /*delete when done*/ background-color: purple;
 }
 .playerSide, .enemySide{
   height: 50%;
 }
 
 
-
 .playerTrumpCardSpace{
+  /*delete when done*/ background-color: #445e97;
+}
+.playerTrumpCardSpace, .enemyTrumpCardSpace{
   font-size: 4em;
   height: 30%;
-  background-color: #445e97;
 }
-.playerCardSpace{
+.enemyTrumpCardSpace{
+  /*delete when done*/ background-color: #b8de0c;
+}
+
+
+
+.playerCardSpace, .enemyCardSpace{
   font-size: 9em;
   height: 55%;
-  background-color: #ff00c8;
+  /*delete when done*/ background-color: #ff00c8;
 }
-.playerCardCounter{ /*done for now*/
+.playerCardCounter, .enemyCardCounter{ /*done for now*/
   justify-self: center;
   text-align: center;
   font-size: 2.5em;
@@ -64,61 +64,90 @@ body{
   background-image: linear-gradient(90deg, transparent, black, black, transparent);
   opacity: 0.9;
 }
-.playerCardCounter * {
+.enemyCardCounter{
+  transform: rotateZ(180deg);
+}
+.playerCardCounter div,
+.enemyCardCounter div {
   display: inline;
 }
 
 
+:root{
+  --cardHeight: 180px;
+  --cardWidth: 140px;
+}
 
-.cardPlace1{
-  left: 5em;
-  height: var(--tableContainerHeight);
-  height: calc(9 * 20px);
-  width: calc(7 * 20px);
+
+.enemyCardSpace > div, .playerCardSpace > div { /*playing card specs*/
+  height: var(--cardHeight);
+  width: var(--cardWidth);
+  top: 5px;
   position: absolute;
-  box-shadow: 1px 1px 10px 1px;
-  background-image: url(pictures/PlayingCard1.png);
+  box-shadow: 0px 0px 15px 3px;
   background-size: 100% 100%;
 }
-.cardPlace2{
-  left: calc(5.53  * 20px);
-  height: var(--tableContainerHeight);
-  height: calc(9 * 20px);
-  width: calc(5.53 * 20px);
-  position: absolute;
-  border: 3px solid rgb(0, 255, 21);
+
+.player_PlayingCard_Place_1{
+  left: 1.5em;
+  background-image: url(pictures/back_of_card.png);
+}
+.player_PlayingCard_Place_2{
+  left: calc(2.5em + 20px);
   background-image: url(pictures/PlayingCard2.png);
-  background-size: 100% 100%;
 }
-.cardPlace3{
-  left: calc(5.53 * 2 * 20px);
-  height: var(--tableContainerHeight);
-  height: calc(9 * 20px);
-  width: calc(5.53 * 20px);
-  position: absolute;
-  border: 3px solid rgb(0, 255, 21);
-  background-color: black;
+.player_PlayingCard_Place_3{
+  left: calc(3.5em + 40px);
   background-image: url(pictures/PlayingCard3.png);
-  background-size: 100% 100%;
+}
+.player_PlayingCard_Place_4{
+  left: calc(4.5em + 60px);
+  background-image: url(pictures/PlayingCard4.png);
+}
+.player_PlayingCard_Place_5{
+  left: calc(5.5em + 80px);
+  background-image: url(pictures/PlayingCard5.png);
+}
+.player_PlayingCard_Place_6{
+  left: calc(6.5em + 100px);
+  background-image: url(pictures/PlayingCard6.png);
 }
 
 
-/* .secondCard{
-  left: calc(var(--tableContainerHeight) / 1.8);
-  height: var(--tableContainerHeight);
-  height: calc(9 * 20px);
-  width: calc(10 * 20px);
+.enemy_PlayingCard_Place_1{
+  right: 1.5em;
+  background-image: url(pictures/PlayingCard1.png);
+}
+.enemy_PlayingCard_Place_2{
+  right: calc(2.5em + 20px);
+  background-image: url(pictures/PlayingCard2.png);
+}
+.enemy_PlayingCard_Place_3{
+  right: calc(3.5em + 40px);
+  background-image: url(pictures/PlayingCard3.png);
+}
+.enemy_PlayingCard_Place_4{
+  right: calc(4.5em + 60px);
+  background-image: url(pictures/PlayingCard4.png);
+}
+.enemy_PlayingCard_Place_5{
+  right: calc(5.5em + 80px);
+  background-image: url(pictures/PlayingCard5.png);
+}
+.enemy_PlayingCard_Place_6{
+  right: calc(6.5em + 100px);
+  background-image: url(pictures/PlayingCard6.png);
+}
+
+.firstCardsSpace{
   position: absolute;
-  border: 3px solid rgb(0, 255, 21);
-  background-color: black;
-  transform: rotateX(45deg);
-  transform-origin: center ;
-  bottom: 5em;
-  background-color: green;
-  background-size: 100% 100%;
-} */
-
-
+  top: 15px;
+  height: 25%;
+  width: 140%;
+  justify-self: center;
+  background-image: linear-gradient(90deg, transparent, black, black, transparent);
+  opacity: 0.8;
+}
 .opponent{
   position: absolute;
   top: 3vh;
