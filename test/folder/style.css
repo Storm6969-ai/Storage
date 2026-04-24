@@ -1,0 +1,19 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+nav {
+  width: 200px;
+  height: 100vh;
+  background-color: blue;
+}
+nav .item1 {
+  background-color: red;
+  height: 100px;
+  width: 100px;
+}
+nav:hover .item1 {
+  background-color: green;
+}/*# sourceMappingURL=style.css.map */

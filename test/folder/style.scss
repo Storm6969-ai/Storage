@@ -1,0 +1,19 @@
+$testingcolor: blue;
+
+body{
+    width: 100vw; height: 100vh; background-color: black;
+}
+
+
+nav{
+    width: 200px; height: 100vh; background-color: $testingcolor;
+    .item1{
+        background-color: red;
+        height: 100px; width: 100px;
+    }
+    &:hover{
+        .item1{
+            background-color: green;
+        }
+    }
+}
